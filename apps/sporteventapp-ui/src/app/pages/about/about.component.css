@@ -1,0 +1,15 @@
+hr.rounded {
+  border-top: 8px solid #00fa9e;
+  border-radius: 5px;
+  opacity: inherit;
+}
+
+.imagesize {
+  height: 250px;
+  width: auto;
+}
+
+.container {
+  border-top: 2px solid #00fa9e;
+  border-bottom: 2px solid #00fa9e;
+}

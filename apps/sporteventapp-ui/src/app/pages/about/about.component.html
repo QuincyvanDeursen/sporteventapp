@@ -1,0 +1,75 @@
+<div class="container my-3">
+  <div class="row">
+    <div class="col d-flex-column bg-dark justify-content-center text-center">
+      <h1><span class="title">Project</span> Omschrijving</h1>
+      <hr class="rounded w-75 mx-auto" />
+    </div>
+  </div>
+
+  <div class="row bg-dark">
+    <div class="col">
+      <p class="p-4">
+        Deze website is gemaakt door Quincy van Deursen voor de vakken client
+        side web programming en noSQL databases. Het framework Angular is
+        gebruikt om deze front-end op te zetten. De back-end is opgezet met
+        NestJS. De databases die gebruikt worden zijn MongoDB en Neo4J. Voor
+        MongoDB wordt ook Mongoose gebruikt. Het project in zijn geheel staat in
+        een nx workspace. De applicatie is getest aan de hand van unit,
+        integratie en end2end testen. Voor de testen wordt ook gebruik gemaakt
+        van Jest. 
+        
+        <br>
+        <br>
+        De casus van deze webapplicatie is als volgt: Sportclubs
+        bieden vaak evenementen aan zoals introductielessen, workshops,
+        lezingen, wedstrijden etc. Het probleem daarbij is echter dat je vaak de
+        betreffende sportclub nauw moet volgen om van de evenementen af te
+        weten. Deze applicatie is bedacht om daar verandering in te brengen. Het
+        idee is dat sportscholen de door hun georganiseerde evenementen
+        aanbieden op de applicatie. Gebruikers kunnen deze evenementen zien en
+        de details er van bekijken. Dat maakt het makkelijk om te zien welke
+        evenementen er gehouden worden. Het idee is dat gebruikers kunnen
+        filteren op locatie en soort evenement. Ook kunnen gebruikers vrienden
+        volgen. De gebruiker kan inzien waarvoor de vrienden zich hebben
+        ingeschreven. Ook wordt de gebruiker eventuele evenement aanbevelingen
+        getoond op basis vriend-inschrijvingen of inschrijf geschiedenis. 
+
+        <br>
+        <br>
+        Hoewel de applicatie gebruikt maakt van NoSQL, maakt het onderstaande ERD wel
+        duidelijk welke relaties de entiteiten met elkaar hebben. 
+
+       
+
+      </p>
+      <div class="justify-content-center d-flex">
+        <img src="../../../assets/Images/erd2-min.jpg" alt="Entity Reletionship Diagram" class="w-75 d-flex h-auto">
+      </div>
+      <div class="justify-content-center d-flex pt-4">
+        <ul>
+          <li>
+            Een user kan zich inschrijven voor één of meerdere events.
+          </li>
+          <li>
+            Een event kan meerdere inschrijvingen hebben.
+          </li>
+          <li>
+            Een event wordt gehouden bij één sportclub. 
+          </li>
+          <li>
+            Een sportclub kan meerdere events hosten. 
+          </li>
+          <li>
+            Een medewerker-gebruiker werkt bij een club. 
+          </li>
+          <li>
+            Een medewerker-gebruiker kan evenementen aanmaken.
+          </li>
+        </ul>
+      </div>
+       
+    </div>
+
+   
+  </div>
+</div>
