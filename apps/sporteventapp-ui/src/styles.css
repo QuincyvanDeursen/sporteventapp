@@ -14,8 +14,13 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+td {
   color: white;
+}
+
+a:hover {
+  color: #00fa9e;
 }
 
 .navbar-brand {
@@ -32,6 +37,13 @@ p {
   justify-content: space-between;
 }
 
-.title {
+.title,
+th {
   color: #63c3ff;
+}
+
+hr.rounded {
+  border-top: 8px solid #00fa9e;
+  border-radius: 5px;
+  opacity: inherit;
 }
