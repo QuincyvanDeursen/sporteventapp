@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-center text-center p-3">
+      <h2>
+        <span class="title">{{ event.title }}</span>
+      </h2>
+      <button type="button" class="btn btn-warning ms-2" routerLink="">
+        <i class="fa-regular fa-pen-to-square text-light"></i>
+      </button>
+      <button type="button" class="btn btn-danger ms-2" routerLink="">
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
+    </div>
+    <hr class="rounded w-75 mx-auto" />
+  </div>
+  <div class="row">
+    <div class="col">
+      <h6><span class="title">beschrijving </span>{{ event.description }}</h6>
+      <h6><span class="title">Prijs: </span> €{{ event.price }}</h6>
+      <h6><span class="title">Datum en starttijd: </span>{{ event.date }}</h6>
+      <h6>
+        <span class="title">Tijdsduur: </span>{{ event.durationInMin }} Minuten
+      </h6>
+      <h6><span class="title">Type event: </span>{{ event.type }}</h6>
+    </div>
+  </div>
+</div>
