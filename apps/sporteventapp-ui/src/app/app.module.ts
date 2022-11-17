@@ -11,7 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 //about
 import { AboutComponent } from './pages/about/about.component';
 //events
-import { EventComponent } from './pages/event/event.component';
+import { EventComponent } from './pages/event/event-columns.component';
 import { EventListComponent } from './pages/event/event-list/event-list.component';
 import { EventCreateComponent } from './pages/event/event-create/event-create.component';
 import { EventEditComponent } from './pages/event/event-edit/event-edit.component';
