@@ -1,2 +1,2 @@
-export * from './lib/domain-entities.module';
-export * from './lib/Event.model';
+export * from './lib/domain-entities';
+export * from './lib/Event';

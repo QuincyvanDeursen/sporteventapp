@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './event-columns.component.html',
   styleUrls: ['./event-columns.component.css'],
 })
-export class EventComponent implements OnInit {
+export class EventColumnComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
