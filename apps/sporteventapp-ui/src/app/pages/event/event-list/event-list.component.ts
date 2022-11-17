@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from '@sporteventapp/domain-entities';
-import { EventService } from '../event-service.service';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'sporteventapp-event-list',
