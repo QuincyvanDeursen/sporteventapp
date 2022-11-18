@@ -16,5 +16,5 @@ export interface Event {
   price: number;
   date: Date;
   durationInMin: number;
-  type: Type;
+  type?: Type;
 }

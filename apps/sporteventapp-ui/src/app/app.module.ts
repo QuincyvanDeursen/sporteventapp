@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { EventDetailComponent } from './pages/event/event-detail/event-detail.co
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

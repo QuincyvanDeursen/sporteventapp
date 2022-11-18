@@ -1,3 +1,7 @@
 .tableborder {
   border: 2px solid #00fa9e;
 }
+
+.table-responsive {
+  max-height: 300px;
+}
