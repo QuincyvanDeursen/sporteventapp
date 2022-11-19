@@ -24,14 +24,10 @@ export class EventCreateComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {
-    this.eService.addEvent(this.event);
-    this.router.navigateByUrl('events');
-  }
-
   onClickSubmit() {
     this.event.id = (this.eService.getAllEvents().length + 1).toString();
     this.eService.addEvent(this.event);
+    this.router.navigateByUrl('events');
     console.log('Event Toegevoegd');
   }
 }
