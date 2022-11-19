@@ -1,20 +1,11 @@
-export enum Type {
-  Workshop = 'Workshop',
-  Groepsles = 'Groepsles',
-  Wedstrijd = 'Wedstrijd',
-  Seminar = 'Seminar',
-  TechniekSessie = 'Techniek Sessie',
-  Expo = 'Expo',
-  Lezing = 'Lezing',
-  Anders = 'anders',
-}
+import { SportEventType } from './SportEventType';
 
-export interface Event {
+export interface SportEvent {
   id: string;
   title: string;
   description: string;
   price: number;
   date: Date;
   durationInMin: number;
-  type?: Type;
+  type?: SportEventType;
 }

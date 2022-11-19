@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventService } from '../event.service';
-import { Event } from '@sporteventapp/domain-entities';
+import { SportEvent } from '@sporteventapp/domain-entities';
 
 @Component({
   selector: 'sporteventapp-event-detail',
@@ -9,7 +9,7 @@ import { Event } from '@sporteventapp/domain-entities';
   styleUrls: ['./event-detail.component.css'],
 })
 export class EventDetailComponent implements OnInit {
-  event!: Event;
+  event!: SportEvent;
   eventIdParam: string | null | undefined;
 
   constructor(

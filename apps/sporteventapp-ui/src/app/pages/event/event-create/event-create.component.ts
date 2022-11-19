@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Event, Type } from '@sporteventapp/domain-entities';
+import { SportEvent, SportEventType } from '@sporteventapp/domain-entities';
 import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./event-create.component.css'],
 })
 export class EventCreateComponent implements OnInit {
-  event: Event = {
+  event: SportEvent = {
     id: '',
     title: '',
     description: '',
@@ -18,7 +18,7 @@ export class EventCreateComponent implements OnInit {
     type: undefined,
   };
 
-  types = Object.values(Type);
+  types = Object.values(SportEventType);
 
   constructor(private eService: EventService, private router: Router) {}
 

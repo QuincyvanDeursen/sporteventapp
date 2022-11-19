@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Event } from '@sporteventapp/domain-entities';
+import { SportEvent } from '@sporteventapp/domain-entities';
 import { EventService } from '../event.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { EventService } from '../event.service';
   styleUrls: ['./event-list.component.css'],
 })
 export class EventListComponent implements OnInit {
-  events!: Event[];
+  events!: SportEvent[];
 
   constructor(private eService: EventService) {}
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Event, Type } from '@sporteventapp/domain-entities';
+import { SportEvent, SportEventType } from '@sporteventapp/domain-entities';
 import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -10,10 +10,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./event-edit.component.css'],
 })
 export class EventEditComponent implements OnInit {
-  EventToUpdate!: Event;
+  EventToUpdate!: SportEvent;
   eventIdParam: string | null | undefined;
   eventDateString!: string;
-  types = Object.values(Type);
+  types = Object.values(SportEventType);
 
   constructor(
     private eService: EventService,

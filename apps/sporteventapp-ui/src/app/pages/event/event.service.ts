@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Event } from '@sporteventapp/domain-entities';
-import { Type } from '@sporteventapp/domain-entities';
+import { SportEvent } from '@sporteventapp/domain-entities';
+import { SportEventType } from '@sporteventapp/domain-entities';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EventService {
-  events: Event[] = [
+  events: SportEvent[] = [
     {
       id: '1',
       title: 'Weightlift Techniek Demo',
@@ -15,7 +15,7 @@ export class EventService {
       price: 20,
       date: new Date('2022-12-15T12:20'),
       durationInMin: 90,
-      type: Type.TechniekSessie,
+      type: SportEventType.TechniekSessie,
     },
     {
       id: '2',
@@ -25,7 +25,7 @@ export class EventService {
       price: 20,
       date: new Date('2023-01-15T15:40'),
       durationInMin: 120,
-      type: Type.TechniekSessie,
+      type: SportEventType.TechniekSessie,
     },
     {
       id: '3',
@@ -35,7 +35,7 @@ export class EventService {
       price: 30,
       date: new Date('2022-12-18T17:00'),
       durationInMin: 90,
-      type: Type.Seminar,
+      type: SportEventType.Seminar,
     },
     {
       id: '4',
@@ -45,7 +45,7 @@ export class EventService {
       price: 15,
       date: new Date('2023-02-20T16:30'),
       durationInMin: 60,
-      type: Type.Lezing,
+      type: SportEventType.Lezing,
     },
     {
       id: '5',
@@ -55,7 +55,7 @@ export class EventService {
       price: 15,
       date: new Date('2022-12-05T14:00'),
       durationInMin: 600,
-      type: Type.Wedstrijd,
+      type: SportEventType.Wedstrijd,
     },
   ];
 
@@ -63,19 +63,19 @@ export class EventService {
     console.log('Event-Service created');
   }
 
-  getAllEvents(): Event[] {
+  getAllEvents(): SportEvent[] {
     return this.events;
   }
 
-  getEventById(id: string): Event {
-    return this.events.filter((event: Event) => event.id === id)[0];
+  getEventById(id: string): SportEvent {
+    return this.events.filter((event: SportEvent) => event.id === id)[0];
   }
 
-  addEvent(newEvent: Event): void {
+  addEvent(newEvent: SportEvent): void {
     this.events.push(newEvent);
   }
 
-  updateEvent(updatedEvent: Event) {
+  updateEvent(updatedEvent: SportEvent) {
     console.log('Updating user ' + updatedEvent.title);
 
     const updatedEvents = this.events.filter(
