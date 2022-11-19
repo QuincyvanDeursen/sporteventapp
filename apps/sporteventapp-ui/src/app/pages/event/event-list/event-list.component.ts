@@ -18,4 +18,11 @@ export class EventListComponent implements OnInit {
       'eventlist getall() : ' + this.events.length + ' events found.'
     );
   }
+
+  OnDeleteEvent(id: string) {
+    console.log('Delete event with id: ' + id);
+
+    this.eService.deleteEvent(id);
+    this.events = this.eService.getAllEvents();
+  }
 }
