@@ -16,6 +16,7 @@ export class EventCreateComponent implements OnInit {
     date: new Date(),
     durationInMin: 0,
     type: undefined,
+    maxEnrollments: 0,
   };
 
   types = Object.values(SportEventType);

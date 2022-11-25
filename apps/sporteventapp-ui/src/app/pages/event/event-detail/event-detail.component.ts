@@ -12,11 +12,7 @@ export class EventDetailComponent implements OnInit {
   event!: SportEvent;
   eventIdParam: string | null | undefined;
 
-  constructor(
-    private eService: EventService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private eService: EventService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

@@ -27,6 +27,7 @@
               <th scope="col">Prijs</th>
               <th scope="col">Datum</th>
               <th scope="col">Type</th>
+              <th scope="col">Vrije Plekken</th>
               <th scope="col">Acties</th>
             </tr>
           </thead>
@@ -44,6 +45,7 @@
               <td>{{ '€' + event.price }}</td>
               <td>{{ event.date | date: 'short' }}</td>
               <td>{{ event.type }}</td>
+              <td>{{ event.maxEnrollments }} / {{ event.maxEnrollments }}</td>
               <td>
                 <div class="d-flex m-0">
                   <a

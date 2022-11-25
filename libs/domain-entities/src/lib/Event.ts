@@ -8,4 +8,5 @@ export interface SportEvent {
   date: Date;
   durationInMin: number;
   type?: SportEventType;
+  maxEnrollments: number;
 }

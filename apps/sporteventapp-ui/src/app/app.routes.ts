@@ -4,6 +4,7 @@ import { EventColumnComponent } from './pages/event/event-columns.component';
 import { EventCreateComponent } from './pages/event/event-create/event-create.component';
 import { EventDetailComponent } from './pages/event/event-detail/event-detail.component';
 import { EventEditComponent } from './pages/event/event-edit/event-edit.component';
+import { SportclubColumnsComponent } from './pages/sportclub-columns/sportclub-columns.component';
 
 export const appRoutes: Route[] = [
   //about
@@ -18,5 +19,10 @@ export const appRoutes: Route[] = [
     children: [
       { path: ':id', pathMatch: 'full', component: EventDetailComponent },
     ],
+  },
+  {
+    path: 'sportclubs',
+    pathMatch: 'full',
+    component: SportclubColumnsComponent,
   },
 ];

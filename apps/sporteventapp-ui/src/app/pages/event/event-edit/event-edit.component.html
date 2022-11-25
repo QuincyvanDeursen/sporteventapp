@@ -147,6 +147,32 @@
             </div>
           </div>
         </div>
+        <div class="col">
+          <label for="maxEnrollments">Beschikbare plekken: </label>
+          <input
+            type="number"
+            name="maxEnrollments"
+            class="form-control"
+            [(ngModel)]="EventToUpdate.maxEnrollments"
+            #maxEnrollments="ngModel"
+            min="1"
+            required
+          />
+          <div
+            *ngIf="
+              maxEnrollments.invalid &&
+              (maxEnrollments.dirty || maxEnrollments.touched)
+            "
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="maxEnrollments.errors!['required']">
+              Geef het aantalbeschikbare plekken aan.
+            </div>
+            <div *ngIf="maxEnrollments.errors!['min']">
+              Het minimale aantal deelnemers is 1.
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row py-3">
         <div class="col">

@@ -9,13 +9,24 @@
   </div>
   <div class="row my-4 py-2">
     <div class="col">
-      <h6><span class="title">beschrijving </span>{{ event.description }}</h6>
+      <h3 class="title">Informatie</h3>
+      <h6><span class="title">beschrijving: </span>{{ event.description }}</h6>
       <h6><span class="title">Prijs: </span> €{{ event.price }}</h6>
-      <h6><span class="title">Datum en starttijd: </span>{{ event.date }}</h6>
+      <h6>
+        <span class="title">Datum en starttijd: </span
+        >{{ event.date | date: 'short' }}
+      </h6>
       <h6>
         <span class="title">Tijdsduur: </span>{{ event.durationInMin }} Minuten
       </h6>
       <h6><span class="title">Type event: </span>{{ event.type }}</h6>
+      <h6>
+        <span class="title">Beschikbare plekken: </span
+        >{{ event.maxEnrollments }}/{{ event.maxEnrollments }}
+      </h6>
+    </div>
+    <div class="col-12 col-lg-6">
+      <img src="../../../../assets/Images/EventPH.webp" class="img-fluid" />
     </div>
   </div>
 </div>

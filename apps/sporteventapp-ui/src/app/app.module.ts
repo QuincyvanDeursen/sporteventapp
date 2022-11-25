@@ -18,6 +18,10 @@ import { EventListComponent } from './pages/event/event-list/event-list.componen
 import { EventCreateComponent } from './pages/event/event-create/event-create.component';
 import { EventEditComponent } from './pages/event/event-edit/event-edit.component';
 import { EventDetailComponent } from './pages/event/event-detail/event-detail.component';
+import { SportclubColumnsComponent } from './pages/sportclub-columns/sportclub-columns.component';
+import { SportclubListComponent } from './pages/sportclub-list/sportclub-list/sportclub-list.component';
+
+//sportclubs
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import { EventDetailComponent } from './pages/event/event-detail/event-detail.co
     EventCreateComponent,
     EventEditComponent,
     EventDetailComponent,
+    SportclubColumnsComponent,
+    SportclubListComponent,
   ],
   imports: [
     BrowserModule,
