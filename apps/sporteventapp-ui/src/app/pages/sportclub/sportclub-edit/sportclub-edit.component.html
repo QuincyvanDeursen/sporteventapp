@@ -1,0 +1,194 @@
+<div class="container bg-dark p-5 title fw-bold">
+  <h1 class="title">Pas een sportclub aan!</h1>
+  <hr class="rounded" />
+  <div class="row">
+    <form
+      #SportClubEditForm="ngForm"
+      name="form"
+      (ngSubmit)="onClickSubmit()"
+      novalidate
+    >
+      <div class="form-row">
+        <div class="col">
+          <label for="name">Naam</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Sportschool"
+            [(ngModel)]="sportclubToUpdate.name"
+            #name="ngModel"
+            minlength="3"
+            required
+          />
+          <div
+            *ngIf="name.invalid && (name.dirty || name.touched)"
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="name.errors!['required']">Een naam is verplicht.</div>
+            <div *ngIf="name.errors!['minlength']">
+              De naam moet minimaal 3 karakters lang zijn.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="websiteURL">Website</label>
+          <input
+            type="text"
+            name="websiteURL"
+            class="form-control"
+            placeholder="www.mijnwebsite.nl"
+            [(ngModel)]="sportclubToUpdate.websiteURL"
+            #websiteURL="ngModel"
+            minlength="3"
+            required
+          />
+          <div
+            *ngIf="
+              websiteURL.invalid && (websiteURL.dirty || websiteURL.touched)
+            "
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="name.errors!['required']">
+              Een website is verplicht.
+            </div>
+            <div *ngIf="name.errors!['minlength']">
+              De website moet minimaal 4 karakters lang zijn.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="city">Stad</label>
+          <input
+            type="text"
+            name="city"
+            class="form-control"
+            placeholder="Breda"
+            [(ngModel)]="sportclubToUpdate.city"
+            #city="ngModel"
+            minlength="3"
+            required
+          />
+          <div
+            *ngIf="city.invalid && (city.dirty || city.touched)"
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="name.errors!['required']">Een stad is verplicht.</div>
+            <div *ngIf="name.errors!['minlength']">
+              Een stad moet minimaal 3 karakters lang zijn.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="zipCode">Postcode</label>
+          <input
+            type="text"
+            name="zipCode"
+            class="form-control"
+            placeholder="Breda"
+            [(ngModel)]="sportclubToUpdate.zipCode"
+            #zipCode="ngModel"
+            minlength="6"
+            maxlength="6"
+            required
+          />
+          <div
+            *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)"
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="name.errors!['required']">
+              Een postcode is verplicht.
+            </div>
+            <div *ngIf="name.errors!['minlength']">
+              Een postcode moet 6 tekens lang zijn.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="street">Street</label>
+          <input
+            type="text"
+            name="street"
+            class="form-control"
+            placeholder="straatnaam"
+            [(ngModel)]="sportclubToUpdate.street"
+            #street="ngModel"
+            minlength="3"
+            required
+          />
+          <div
+            *ngIf="street.invalid && (street.dirty || street.touched)"
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="name.errors!['required']">Een straat is verplicht.</div>
+            <div *ngIf="name.errors!['minlength']">
+              Een straat moet minstens 3 tekens lang zijn.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="houseNumber">Huisnummer</label>
+          <input
+            type="text"
+            name="houseNumber"
+            class="form-control"
+            placeholder="105A"
+            [(ngModel)]="sportclubToUpdate.houseNumber"
+            #houseNumber="ngModel"
+            minlength="1"
+            required
+          />
+          <div
+            *ngIf="
+              houseNumber.invalid && (houseNumber.dirty || houseNumber.touched)
+            "
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="name.errors!['required']">
+              Een huisnummer is verplicht.
+            </div>
+            <div *ngIf="name.errors!['minlength']">
+              Een huisnummer moet minstens 1 teken lang zijn.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="sportsString">Sport Aanbod</label>
+          <small> (plaats meerdere door ze te scheiden met een komma)</small>
+          <input
+            type="text"
+            name="sports"
+            class="form-control"
+            placeholder="sportA,sportB,sportC"
+            [(ngModel)]="sportsclubsString"
+            #sports="ngModel"
+            minlength="1"
+            required
+          />
+          <div
+            *ngIf="sports.invalid && (sports.dirty || sports.touched)"
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="name.errors!['required']">Een sport is verplicht.</div>
+            <div *ngIf="name.errors!['minlength']">
+              Een sport moet tenmisnte 1 teken lang zijn.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-3">
+        <div class="col">
+          <button
+            type="submit"
+            class="btn btn-primary mx-2"
+            [disabled]="!SportClubEditForm.valid"
+          >
+            Submit
+          </button>
+          <button class="btn btn-warning mx-2" routerLink="..">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

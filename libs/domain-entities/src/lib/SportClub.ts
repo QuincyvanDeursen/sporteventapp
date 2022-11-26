@@ -1,8 +1,10 @@
-import { Settlement } from './Settlement';
-
 export interface SportClub {
   id: string;
   name: string;
-  Settlements: Settlement[];
-  website: string;
+  websiteURL: string;
+  city: string;
+  zipCode: string;
+  street: string;
+  houseNumber: string;
+  sports: string[];
 }

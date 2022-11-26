@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { EventService } from '../event.service';
 import { SportEvent } from '@sporteventapp/domain-entities';
 
