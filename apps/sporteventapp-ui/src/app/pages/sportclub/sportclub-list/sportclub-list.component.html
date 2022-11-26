@@ -4,11 +4,11 @@
       <div
         class="col d-flex justify-content-center text-center align-items-center"
       >
-        <h2><span class="title">Evenementen</span></h2>
+        <h2><span class="title">Aangesloten Sportclubs</span></h2>
         <a
           type="button"
           class="btn btn-success m-3"
-          [routerLink]="'/events/new'"
+          routerLink="/sportclubs/new"
         >
           <i class="fa-regular fa-square-plus"></i>
         </a>
@@ -23,42 +23,48 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Titel</th>
-              <th scope="col">Prijs</th>
-              <th scope="col">Datum</th>
-              <th scope="col">Type</th>
-              <th scope="col">Vrije Plekken</th>
+              <th scope="col">Naam</th>
+              <th scope="col">Website</th>
+              <th scope="col">Stad</th>
               <th scope="col">Acties</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let event of events; let i = index">
+            <tr *ngFor="let club of sportclubs; let i = index">
               <th scope="row">{{ i + 1 }}</th>
               <td>
                 <a
-                  routerLink="{{ event.id }}"
+                  routerLink="{{ club.id }}"
                   routerLinkActive="active"
                   ariaCurrentWhenActive="page"
-                  >{{ event.title }}</a
+                  >{{ club.name }}</a
                 >
               </td>
-              <td>{{ '€' + event.price }}</td>
-              <td>{{ event.date | date: 'short' }}</td>
-              <td>{{ event.type }}</td>
-              <td>{{ event.maxEnrollments }} / {{ event.maxEnrollments }}</td>
+              <td>
+                <a
+                  href="{{ club.websiteURL }}"
+                  routerLinkActive="active"
+                  target="”_blank”"
+                  ariaCurrentWhenActive="page"
+                  >Link</a
+                >
+              </td>
+              <td>
+                {{ club.city }}
+              </td>
               <td>
                 <div class="d-flex m-0">
                   <a
                     type="button"
                     class="btn btn-warning m-3"
-                    routerLink="/events/{{ event.id }}/edit"
+                    routerLink="/sportclubs/{{ club.id }}/edit"
                   >
                     <i class="fa-regular fa-pen-to-square text-light"></i>
                   </a>
                   <a
                     type="button"
                     class="btn btn-danger m-3"
-                    (click)="OnDeleteEvent(event.id)"
+                    (click)="OnDeleteEvent(club.id)"
                   >
                     <i class="fa-solid fa-trash-can"></i>
                   </a>

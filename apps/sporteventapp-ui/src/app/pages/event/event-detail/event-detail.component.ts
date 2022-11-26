@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { EventService } from '../event.service';
 import { SportEvent } from '@sporteventapp/domain-entities';
 
@@ -12,11 +12,7 @@ export class EventDetailComponent implements OnInit {
   event!: SportEvent;
   eventIdParam: string | null | undefined;
 
-  constructor(
-    private eService: EventService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private eService: EventService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

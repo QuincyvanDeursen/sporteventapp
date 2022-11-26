@@ -1,5 +1,5 @@
 <div class="container bg-dark p-5 title fw-bold">
-  <h1 class="title">Maak een Event aan!</h1>
+  <h1 class="title">Pas een Event aan!</h1>
   <hr class="rounded" />
   <div class="row">
     <form
@@ -144,6 +144,32 @@
           >
             <div *ngIf="type.errors!['required']">
               Geef het type van het evenement aan.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="maxEnrollments">Beschikbare plekken: </label>
+          <input
+            type="number"
+            name="maxEnrollments"
+            class="form-control"
+            [(ngModel)]="EventToUpdate.maxEnrollments"
+            #maxEnrollments="ngModel"
+            min="1"
+            required
+          />
+          <div
+            *ngIf="
+              maxEnrollments.invalid &&
+              (maxEnrollments.dirty || maxEnrollments.touched)
+            "
+            class="alert alert-danger mt-1"
+          >
+            <div *ngIf="maxEnrollments.errors!['required']">
+              Geef het aantalbeschikbare plekken aan.
+            </div>
+            <div *ngIf="maxEnrollments.errors!['min']">
+              Het minimale aantal deelnemers is 1.
             </div>
           </div>
         </div>

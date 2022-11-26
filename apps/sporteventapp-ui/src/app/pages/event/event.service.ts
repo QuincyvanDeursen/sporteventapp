@@ -16,6 +16,7 @@ export class EventService {
       date: new Date('2022-12-15T12:20'),
       durationInMin: 90,
       type: SportEventType.TechniekSessie,
+      maxEnrollments: 50,
     },
     {
       id: '2',
@@ -26,6 +27,7 @@ export class EventService {
       date: new Date('2023-01-15T15:40'),
       durationInMin: 120,
       type: SportEventType.TechniekSessie,
+      maxEnrollments: 40,
     },
     {
       id: '3',
@@ -36,6 +38,7 @@ export class EventService {
       date: new Date('2022-12-18T17:00'),
       durationInMin: 90,
       type: SportEventType.Seminar,
+      maxEnrollments: 30,
     },
     {
       id: '4',
@@ -46,6 +49,7 @@ export class EventService {
       date: new Date('2023-02-20T16:30'),
       durationInMin: 60,
       type: SportEventType.Lezing,
+      maxEnrollments: 30,
     },
     {
       id: '5',
@@ -56,6 +60,7 @@ export class EventService {
       date: new Date('2022-12-05T14:00'),
       durationInMin: 600,
       type: SportEventType.Wedstrijd,
+      maxEnrollments: 20,
     },
   ];
 
